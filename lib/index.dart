@@ -20,7 +20,7 @@ export '/empresa/s_e_a_r_c_h_candidates/s_e_a_r_c_h_candidates_widget.dart'
 export '/candidato/m_a_i_n_my_profile/m_a_i_n_my_profile_widget.dart'
     show MAINMyProfileWidget;
 export '/pages/m_a_i_n_chat/m_a_i_n_chat_widget.dart' show MAINChatWidget;
-export '/pages/d_e_t_a_i_l_s_chat/d_e_t_a_i_l_s_chat_widget.dart'
+export '/empresa/d_e_t_a_i_l_s_chat/d_e_t_a_i_l_s_chat_widget.dart'
     show DETAILSChatWidget;
 export '/pages/job_post_details_actual/job_post_details_actual_widget.dart'
     show JobPostDetailsActualWidget;
@@ -53,3 +53,4 @@ export '/empresa/profile_empresa/profile_empresa_widget.dart'
     show ProfileEmpresaWidget;
 export '/empresa/m_a_i_n_my_profile_empresa/m_a_i_n_my_profile_empresa_widget.dart'
     show MAINMyProfileEmpresaWidget;
+export '/pages/chat_copy/chat_copy_widget.dart' show ChatCopyWidget;

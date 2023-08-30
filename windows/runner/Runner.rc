@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "conexao-talentosv1" "\0"
+            VALUE "CompanyName", "conexao-talentos" "\0"
             VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "conexao-talentosv1" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2022 conexao-talentosv1. All rights reserved." "\0"
-            VALUE "OriginalFilename", "conexao_talentosv1.exe" "\0"
-            VALUE "ProductName", "conexao-talentosv1" "\0"
+            VALUE "InternalName", "conexao-talentos" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 conexao-talentos. All rights reserved." "\0"
+            VALUE "OriginalFilename", "conexao_talentos.exe" "\0"
+            VALUE "ProductName", "conexao-talentos" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

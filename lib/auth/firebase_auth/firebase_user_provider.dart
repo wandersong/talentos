@@ -5,8 +5,8 @@ import '../base_auth_user_provider.dart';
 
 export '../base_auth_user_provider.dart';
 
-class ConexaoTalentosv1FirebaseUser extends BaseAuthUser {
-  ConexaoTalentosv1FirebaseUser(this.user);
+class ConexaoTalentosFirebaseUser extends BaseAuthUser {
+  ConexaoTalentosFirebaseUser(this.user);
   User? user;
   bool get loggedIn => user != null;
 
@@ -48,10 +48,10 @@ class ConexaoTalentosv1FirebaseUser extends BaseAuthUser {
   static BaseAuthUser fromUserCredential(UserCredential userCredential) =>
       fromFirebaseUser(userCredential.user);
   static BaseAuthUser fromFirebaseUser(User? user) =>
-      ConexaoTalentosv1FirebaseUser(user);
+      ConexaoTalentosFirebaseUser(user);
 }
 
-Stream<BaseAuthUser> conexaoTalentosv1FirebaseUserStream() =>
+Stream<BaseAuthUser> conexaoTalentosFirebaseUserStream() =>
     FirebaseAuth.instance
         .authStateChanges()
         .debounce((user) => user == null && !loggedIn
@@ -59,7 +59,7 @@ Stream<BaseAuthUser> conexaoTalentosv1FirebaseUserStream() =>
             : Stream.value(user))
         .map<BaseAuthUser>(
       (user) {
-        currentUser = ConexaoTalentosv1FirebaseUser(user);
+        currentUser = ConexaoTalentosFirebaseUser(user);
         return currentUser!;
       },
     );

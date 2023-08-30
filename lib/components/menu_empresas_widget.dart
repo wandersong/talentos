@@ -84,6 +84,20 @@ class _MenuEmpresasWidgetState extends State<MenuEmpresasWidget> {
                 context.pushNamed('MAIN_Candidates');
               },
             ),
+            FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 20.0,
+              borderWidth: 1.0,
+              buttonSize: 50.0,
+              icon: Icon(
+                Icons.chat,
+                color: FlutterFlowTheme.of(context).primaryText,
+                size: 30.0,
+              ),
+              onPressed: () async {
+                context.pushNamed('MAIN_Candidates');
+              },
+            ),
           ].divide(SizedBox(width: 10.0)),
         ),
       ),

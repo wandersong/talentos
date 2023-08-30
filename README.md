@@ -1,4 +1,4 @@
-# conexao-talentosv1
+# conexao-talentos
 
 A new Flutter project.
 

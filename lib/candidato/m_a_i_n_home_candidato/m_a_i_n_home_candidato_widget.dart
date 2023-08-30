@@ -54,45 +54,6 @@ class _MAINHomeCandidatoWidgetState extends State<MAINHomeCandidatoWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          context.pushNamed(
-            'createJob',
-            extra: <String, dynamic>{
-              kTransitionInfoKey: TransitionInfo(
-                hasTransition: true,
-                transitionType: PageTransitionType.bottomToTop,
-                duration: Duration(milliseconds: 250),
-              ),
-            },
-          );
-        },
-        backgroundColor: FlutterFlowTheme.of(context).secondary,
-        elevation: 8.0,
-        child: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30.0,
-          borderWidth: 1.0,
-          buttonSize: 48.0,
-          icon: Icon(
-            Icons.add_rounded,
-            color: FlutterFlowTheme.of(context).tertiary,
-            size: 30.0,
-          ),
-          onPressed: () async {
-            context.pushNamed(
-              'createJob',
-              extra: <String, dynamic>{
-                kTransitionInfoKey: TransitionInfo(
-                  hasTransition: true,
-                  transitionType: PageTransitionType.bottomToTop,
-                  duration: Duration(milliseconds: 250),
-                ),
-              },
-            );
-          },
-        ),
-      ),
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).darkText,
         automaticallyImplyLeading: false,

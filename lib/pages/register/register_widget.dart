@@ -268,47 +268,50 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                               20.0, 12.0, 20.0, 12.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              FFButtonWidget(
-                                onPressed: () async {
-                                  GoRouter.of(context).prepareAuthEvent();
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    GoRouter.of(context).prepareAuthEvent();
 
-                                  final user =
-                                      await authManager.createAccountWithEmail(
-                                    context,
-                                    _model.emailAddressController.text,
-                                    _model.passwordController.text,
-                                  );
-                                  if (user == null) {
-                                    return;
-                                  }
+                                    final user = await authManager
+                                        .createAccountWithEmail(
+                                      context,
+                                      _model.emailAddressController.text,
+                                      _model.passwordController.text,
+                                    );
+                                    if (user == null) {
+                                      return;
+                                    }
 
-                                  context.pushNamedAuth(
-                                      'CreateProfile', context.mounted);
-                                },
-                                text: 'Criar conta',
-                                options: FFButtonOptions(
-                                  width: 200.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: FlutterFlowTheme.of(context)
-                                            .tertiary,
-                                      ),
-                                  elevation: 2.0,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
+                                    context.pushNamedAuth(
+                                        'CreateProfile', context.mounted);
+                                  },
+                                  text: 'Criar conta',
+                                  options: FFButtonOptions(
+                                    width: 200.0,
+                                    height: 50.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+                                        ),
+                                    elevation: 2.0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12.0),
                                   ),
-                                  borderRadius: BorderRadius.circular(12.0),
                                 ),
                               ),
                             ],

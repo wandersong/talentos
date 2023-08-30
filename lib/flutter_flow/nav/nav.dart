@@ -286,6 +286,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'MAIN_MyProfileEmpresa',
           path: '/mAINMyProfileEmpresa',
           builder: (context, params) => MAINMyProfileEmpresaWidget(),
+        ),
+        FFRoute(
+          name: 'ChatCopy',
+          path: '/chatCopy',
+          builder: (context, params) => ChatCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

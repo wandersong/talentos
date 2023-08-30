@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(conexao_talentosv1 LANGUAGES CXX)
+project(conexao_talentos LANGUAGES CXX)
 
-set(BINARY_NAME "conexao_talentosv1")
+set(BINARY_NAME "conexao_talentos")
 
 cmake_policy(SET CMP0063 NEW)
 

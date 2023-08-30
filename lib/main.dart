@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
-    userStream = conexaoTalentosv1FirebaseUserStream()
+    userStream = conexaoTalentosFirebaseUserStream()
       ..listen((user) => _appStateNotifier.update(user));
     jwtTokenStream.listen((_) {});
     Future.delayed(
@@ -86,7 +86,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'conexao-talentosv1',
+      title: 'conexao-talentos',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
